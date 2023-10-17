@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="login-container">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <label>Product Name: </label>
+        <input type="text" name="prod_name" />
+        <label>Product Image (URL): </label>
+        <input type="text" name="prod_image" />
+        <label>Product Type: </label>
+        <input type="text" name="prod_type" />
+        <label>Product Price: </label>
+        <input type="number" name="prod_price" />
+
+        <input type="submit" value="upload">
+    </form>
+</div>
+
+{% endblock content %}
